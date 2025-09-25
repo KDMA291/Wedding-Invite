@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Boda K&B</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <header class="header-format">
+                <h1 class="header-title">Kevin & Bri</h1>
+                <div class="header-text">25 de Abril, 2025 • Provincia de Cartago, Paraíso, Costa Rica</div>
+                
+                <!-- Count down Timer -->
+                <div class="header-text">Faltan
+                    <span id="days">0</span> días, 
+                    <span id="hours">0</span> horas, 
+                    <span id="minutes">0</span> minutos, 
+                    <span id="seconds">0</span> segundos
+                </div>
+                <div id="countdown" class="header-text"></div>
+                <script src="script.js"></script>
+            </header>
+
+            <div class="navbar-container">
+                <nav class="navbar-format">
+                    <div class ="ul-container">
+                        <ul class="ul-format">
+                            <li class="li-container" onclick="showContent('home')"><a class="li-format" data-section="home" href="#Inicio">Inicio</a></li>
+                            <li class="li-container" onclick="showContent('rsvp')"><a class="li-format" data-section="rsvp" href="#rsvp">Asistencia</a></li>
+                            <li class="li-container" onclick="showContent('photos')"><a class="li-format" data-section="photos" href="#Fotos">Fotos</a></li>
+                            <li class="li-container" onclick="showContent('questions')"><a class="li-format" data-section="questions" href="#Dudas">Dudas</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="main-container">
+
+            <!-- Home Page -->
+            <div class="home-content" id="home" style="display: flex;">
+                <div class="wedding-date">
+                    <span class="date-with-icon">
+                        <svg class="place-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="28" height="28">
+                            <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
+                        </svg>
+                        <span class="place-text">Abril 25 2026</span>
+                    </span>
+                </div>
+                <div class="wedding-place">
+                    <a href="https://maps.app.goo.gl/4GSCtSx8J7iriVqE6">
+                        <!-- Inline SVG location icon added for accessibility and no extra requests -->
+                        <svg class="place-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="28" height="28">
+                            <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                        </svg>
+                        <span class="place-text">Finca Los Novios, Paraíso de Cartago</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RSVP Section -->
+            <div class="rsvp-content" id="rsvp" style="display: none;">
+
+                <div class="rsvp-form">
+                    <button class="button" onclick="window.open('https://forms.gle/GU72Vy7Nc4SWvxLNA')">CONFIRMAR ASISTENCIA</button>
+                </div>
+
+            </div>
+
+            <!-- Photos Section -->
+            <div class="photos-content" id="photos" style="display: none;">
+
+                <div class="photos-instructions">
+                    <span>¡Escanea el código QR para participar con una cámara desechable virtual! </span>
+                    <p>Cada invitado cuenta con 10 fotos a lo largo del evento. Estas fotos se revelaran en un álbum compartido después de la boda.</p>
+                </div>
+
+                <div class="photos-qr">
+                    <img src="QR-B.png" alt="QR Code">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-container" id="home">
+            <footer class="footer-format">
+                <div class="footer-text">K&B</div>
+                <div class="footer-date">25•4•2026</div>
+            </footer>
+        </div>
+        
+    </body>
+</html>
