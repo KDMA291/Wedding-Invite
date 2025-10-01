@@ -295,6 +295,13 @@ body {
 
 @media (max-width: 600px) {
   .place-icon { width: 3.8rem; height: 3.8rem; }
+  /* stack icon above text on small screens */
+  .place-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .place-text { text-align: center; }
   .button-link { min-width: 220px; min-height: 48px; font-size: 16px; }
 }
 
