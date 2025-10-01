@@ -43,21 +43,22 @@
             <!-- Home Page -->
             <div class="home-content" id="home" style="display: flex;">
                 <div class="wedding-date">
-                    <span class="date-with-icon">
-                        <svg class="place-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="28" height="28">
-                            <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9zM7 11h5v5H7z"/>
-                        </svg>
-                        <span class="place-text">Abril 25 2026</span>
-                    </span>
+                    <img src="date.png" alt="Date">
+                    <button class="button-link" onclick="window.open(
+                        'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nuestra+Boda&dates=20260425T213000Z/20260426T030000Z&details=%C2%A1Te+esperamos+en+nuestra+boda!&location=Sala+de+Eventos+Finca+Los+Novios')">
+                        Guarda la fecha <br>en tu calendario
+                    </button>
+
                 </div>
                 <div class="wedding-place">
-                    <a href="https://maps.app.goo.gl/4GSCtSx8J7iriVqE6">
-                        <!-- Inline SVG location icon added for accessibility and no extra requests -->
-                        <svg class="place-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="28" height="28">
-                            <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                    <div class="place-top">
+                        <!-- inline location pin SVG -->
+                        <svg class="place-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                            <path fill="#313133" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
                         </svg>
-                        <span class="place-text">Finca Los Novios, Paraíso de Cartago</span>
-                    </a>
+                        <p class="place-text">Lugar del evento: "Finca Los Novios"<br>Paraíso de Cartago</p>
+                    </div>
+                    <button class="button-link" onclick="window.open('https://maps.app.goo.gl/pnD9mFqpZeyD2kvA9')">Mira la Ubicación <br>en Google Maps</button>
                 </div>
             </div>
 
