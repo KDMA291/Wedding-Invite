@@ -133,6 +133,24 @@ body {
   letter-spacing: clamp(0.04rem, 1vw, 0.4rem);
   font-weight: 400;
 }
+@media (max-width: 600px) {
+  .header-title {
+    font-size: clamp(2.8rem, 10vw, 5.5rem);
+  }
+}
+
+.header-subtitle {
+
+  font-size: 1.5rem;
+  color: #494b48;
+  letter-spacing: clamp(0.04rem, 1vw, 0.4rem);
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .header-subtitle {
+    font-size: clamp(0.2rem, 4vw, 5.5rem);
+  }
+}
 
 .header-text {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
@@ -638,7 +656,8 @@ content: '';
     max-width: 100vw;
   }
   .header-title {
-    font-size: clamp(1.25rem, 9vw, 2rem);
+    /* ensure the header remains large and readable on phones */
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
   }
   .wedding-date, .wedding-place, .rsvp-confirmation, .rsvp-list {
     padding: 0.75rem;
