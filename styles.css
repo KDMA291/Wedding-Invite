@@ -35,26 +35,27 @@ body {
 }
 
 .wedding-date img {
-  width: 105%;
+  width: 100%;
+  max-width: 420px;
   height: auto;
   display: block;
   border-radius: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: contain;
 }
 
 .button-link {
-  min-width: 300px;
-  min-height: 60px;
+  /* fluid button sizing for responsive/mobile */
+  width: min(92%, 420px);
+  max-width: 420px;
+  min-height: 48px; /* comfortable touch target */
   display: inline-flex;
-  font-family: 'Abhaya Libre';
-  font-size: 22px;
+  font-family: 'Abhaya Libre', serif;
+  font-size: clamp(16px, 2.6vw, 22px);
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
   font-weight: 700;
   color: #ffffff;
   background: #313133;
@@ -63,10 +64,10 @@ body {
   cursor: pointer;
   outline: none;
   position: relative;
-  padding: 10px;
-  margin: 15px auto;
+  padding: 10px 16px;
+  margin: 12px auto;
   overflow: visible;
-  animation: borderPulse 2s infinite ease-out;
+  animation: borderPulse 1.2s infinite cubic-bezier(.2,.8,.2,1);
 }
 
 .wedding-place p {
@@ -81,11 +82,6 @@ body {
   text-align: center;
   margin: 35px auto;
   font-family: Abhaya Libre;
-}
-
-.button-link{
-  animation: borderPulse 1.5s infinite ease-in-out;
-
 }
 
 @keyframes borderPulse {
@@ -333,7 +329,7 @@ body {
     gap: 0.4rem;
   }
   .place-text { text-align: center; }
-  .button-link { min-width: 220px; min-height: 48px; font-size: 16px; }
+  .button-link { width: 100%; max-width: none; min-height: 48px; font-size: 16px; }
 }
 
 /* Center RSVP button container and allow animations to overflow */
@@ -347,16 +343,17 @@ body {
 }
 
 .rsvp-form button {
-  min-width: 300px;
-  min-height: 60px;
+  width: min(92%, 420px);
+  max-width: 420px;
+  min-height: 44px;
   display: inline-flex;
-  font-family: 'Abhaya Libre';
-  font-size: 22px;
+  font-family: 'Abhaya Libre', serif;
+  font-size: clamp(16px, 3.2vw, 22px);
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
   font-weight: 700;
   color: #ffffff;
   background: #313133;
@@ -366,29 +363,30 @@ body {
   cursor: pointer;
   outline: none;
   position: relative;
-  padding: 10px;
+  padding: 10px 14px;
   margin: 0 auto;
   overflow: visible;
 }
 
 @media (max-width: 600px) {
   .rsvp-form button {
-    min-width: 220px;
-    min-height: 48px;
-    font-size: 18px;
+    width: min(92%, 380px);
+    min-height: 44px;
+    font-size: clamp(15px, 4.2vw, 18px);
     padding: 8px 12px;
   }
   .button::before {
-    min-width: calc(220px + 12px);
-    min-height: calc(48px + 12px);
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
   }
 }
 
 .button::before {
 content: '';
   border-radius: 1000px;
-  min-width: calc(300px + 12px);
-  min-height: calc(60px + 12px);
+  /* size relative to the button so it scales on mobile */
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
   /* border: 6px solid #313133; */
   position: absolute;
   top: 50%;
